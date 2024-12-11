@@ -1,4 +1,4 @@
-# Fullstack 2024
+# Fullstack 2024 (Gosoft course)
 
 Welcome to the Fullstack 2024 project! This repository contains resources, code, and links related to the project.
 
@@ -8,7 +8,7 @@ The project is deployed and can be accessed at the following link:
 
 - [Fullstack 2024 GitHub Pages Deployment](https://kaewkloaw.github.io/Fullstack2024/)
 
-## Presentation Slides
+## Presentation Slides By Dr. Chanakarn Kingkaew (Oak)
 
 | Topic        | Slide Link                                                                                       |
 |--------------|-------------------------------------------------------------------------------------------------|
