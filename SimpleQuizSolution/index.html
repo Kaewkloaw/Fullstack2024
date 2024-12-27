@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ระบบข้อสอบอย่างง่าย Simple Quiz</title>
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div>
+        <div class="quiz-container">
+            <p id="question">1.PIM ย่อมาจากอะไร ?</p>
+            <button class="button" onclick="checkAnswer('a')">A) พีไอเอ็ม</button>
+            <button class="button" onclick="checkAnswer('b')">B) ปิ๋ม</button>
+            <button class="button" onclick="checkAnswer('c')">C) พิม</button>
+            <button class="button" onclick="checkAnswer('d')">D) ภีม</button>
+            <p id="result1"></p>
+        </div>
+        <div class="quiz-container">
+            <p id="question">2.PIM เริ่มก่อตั้งเมื่อปีใด ?</p>
+            <button class="button" onclick="checkAnswer2('a')">A) 2565</button>
+            <button class="button" onclick="checkAnswer2('b')">B) 2560</button>
+            <button class="button" onclick="checkAnswer2('c')">C) 2555</button>
+            <button class="button" onclick="checkAnswer2('d')">D) 2550</button>
+            <p id="result2"></p>
+        </div>
+        <p id="score"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
