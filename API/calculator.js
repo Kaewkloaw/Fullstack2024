@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const axios = require('axios');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 app.get("/", (req, res)=>{
    res.sendFile(__dirname + "/index.html");
@@ -30,6 +32,7 @@ app.post("/bmiCalculator", (req, res)=>{
    var height = Number(req.body.height); //read height
    height = height / 100; // convert cm to m
    var bmi = weight / (height * height); // calculate BMI
+
 if (bmi < 18.5) {
    res.send("Your BMI is " + bmi.toFixed(2) + ",<br>so you are underweight.");
 } else if (bmi >= 18.5 && bmi <= 24.9) {
@@ -39,7 +42,16 @@ if (bmi < 18.5) {
 } else {
    res.send("Your BMI is " + bmi.toFixed(2) + ",<br>so you are obese.");
 }
-} );
+} )
+app.get('/kanye', async (req, res) => {
+   try {
+       const url = 'https://api.kanye.rest/'; // Replace with the URL you want to fetch data from
+       const response = await axios.get(url);
+       res.json(response.data); // Send the fetched data as a response
+   } catch (error) {
+       res.status(500).send('Error fetching data');
+   }
+});
 
 app.listen(3000, ()=> {
    console.log ("Server is running on port 3000");
